@@ -1,0 +1,5 @@
+/Users/B246654/vscode_storage/ssi-dk/WhatsAppTrayManager/src/WhatsAppTrayManager/obj/Debug/net6.0-windows/WhatsAppTrayManager.GeneratedMSBuildEditorConfig.editorconfig
+/Users/B246654/vscode_storage/ssi-dk/WhatsAppTrayManager/src/WhatsAppTrayManager/obj/Debug/net6.0-windows/WhatsAppTrayManager.AssemblyInfoInputs.cache
+/Users/B246654/vscode_storage/ssi-dk/WhatsAppTrayManager/src/WhatsAppTrayManager/obj/Debug/net6.0-windows/WhatsAppTrayManager.AssemblyInfo.cs
+/Users/B246654/vscode_storage/ssi-dk/WhatsAppTrayManager/src/WhatsAppTrayManager/obj/Debug/net6.0-windows/WhatsAppTrayManager.csproj.CoreCompileInputs.cache
+/Users/B246654/vscode_storage/ssi-dk/WhatsAppTrayManager/src/WhatsAppTrayManager/obj/Debug/net6.0-windows/WhatsAppTrayManager.sourcelink.json

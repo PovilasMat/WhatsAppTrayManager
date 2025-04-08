@@ -1,56 +1,56 @@
 # WhatsApp Tray Manager Development Checklist
 
 ## Project Setup
-- [ ] Create a new .NET 6 WinForms project named `WhatsAppTrayManager`
-- [ ] Create a test project named `WhatsAppTrayManager.Tests` (using xUnit or your preferred framework)
-- [ ] Configure project references so the test project can access the main project
-- [ ] Add a dummy test (e.g., `Assert.True(true)`) and verify tests run successfully
+- [x] Create a new .NET 6 WinForms project named `WhatsAppTrayManager` (Updated to .NET 8.0)
+- [x] Create a test project named `WhatsAppTrayManager.Tests` (using xUnit or your preferred framework)
+- [x] Configure project references so the test project can access the main project
+- [x] Add a dummy test (e.g., `Assert.True(true)`) and verify tests run successfully
 
 ## Basic Tray ApplicationContext
-- [ ] Create `TrayApplicationContext` class inheriting from `ApplicationContext`
-- [ ] Initialize a `NotifyIcon` in the ApplicationContext constructor
-  - [ ] Set a temporary icon (e.g., `SystemIcons.Application`)
-  - [ ] Set `notifyIcon.Visible = true`
-  - [ ] Set tooltip text (e.g., "WhatsApp Tray Manager")
-- [ ] Create a context menu with an "Exit" option
-  - [ ] Wire the "Exit" menu item to call `Application.Exit()`
-- [ ] Update `Program.cs` to run the `TrayApplicationContext`
-- [ ] Write unit tests to verify the NotifyIcon is initialized and visible
-- [ ] Write tests (or simulate) that the Exit menu properly terminates the application
+- [x] Create `TrayApplicationContext` class inheriting from `ApplicationContext`
+- [x] Initialize a `NotifyIcon` in the ApplicationContext constructor
+  - [x] Set a temporary icon (e.g., `SystemIcons.Application`)
+  - [x] Set `notifyIcon.Visible = true`
+  - [x] Set tooltip text (e.g., "WhatsApp Tray Manager")
+- [x] Create a context menu with an "Exit" option
+  - [x] Wire the "Exit" menu item to call `Application.Exit()`
+- [x] Update `Program.cs` to run the `TrayApplicationContext`
+- [x] Write unit tests to verify the NotifyIcon is initialized and visible
+- [x] Write tests (or simulate) that the Exit menu properly terminates the application
 
 ## Icon Manager Implementation
-- [ ] Create `IconManager` class with a method `GetIcon(string key)`
-- [ ] Define expected icon keys: "default", "gray", "msg-1", "msg-2", "msg-3", "msg-4", "msg-5", "msg-5plus"
-- [ ] Initially implement GetIcon as a stub returning a default icon
-- [ ] Modify TrayApplicationContext to use `IconManager.GetIcon("default")` for the tray icon
-- [ ] Write tests for `IconManager`:
-  - [ ] Verify `GetIcon("default")` returns a non-null Icon
-  - [ ] (Optionally) Test that an unknown key throws an exception or returns a fallback
+- [x] Create `IconManager` class with a method `GetIcon(string key)`
+- [x] Define expected icon keys: "default", "gray", "msg-1", "msg-2", "msg-3", "msg-4", "msg-5", "msg-5plus"
+- [x] Initially implement GetIcon as a stub returning a default icon
+- [x] Modify TrayApplicationContext to use `IconManager.GetIcon("default")` for the tray icon
+- [x] Write tests for `IconManager`:
+  - [x] Verify `GetIcon("default")` returns a non-null Icon
+  - [x] (Optionally) Test that an unknown key throws an exception or returns a fallback
 
 ## Generate Placeholder Icons
-- [ ] Implement a private method in `IconManager` to generate placeholder icons (`GenerateIcon(string key)`)
-  - [ ] For "default": create a green circle icon
-  - [ ] For "gray": create a gray circle icon
-  - [ ] For "msg-1" to "msg-5": create icons with the corresponding number over a base shape
-  - [ ] For "msg-5plus": create an icon with "5+" text
-- [ ] Cache generated icons in a dictionary to avoid regeneration
-- [ ] Optionally implement disposal logic for generated icons
-- [ ] Write tests to verify:
-  - [ ] Each key returns a non-null, distinct Icon
-  - [ ] Repeated calls for the same key return the same (cached) icon
+- [x] Implement a private method in `IconManager` to generate placeholder icons (`GenerateIcon(string key)`)
+  - [x] For "default": create a green circle icon
+  - [x] For "gray": create a gray circle icon
+  - [x] For "msg-1" to "msg-5": create icons with the corresponding number over a base shape
+  - [x] For "msg-5plus": create an icon with "5+" text
+- [x] Cache generated icons in a dictionary to avoid regeneration
+- [x] Optionally implement disposal logic for generated icons
+- [x] Write tests to verify:
+  - [x] Each key returns a non-null, distinct Icon
+  - [x] Repeated calls for the same key return the same (cached) icon
 
 ## Configuration File Handling
-- [ ] Create a `Settings` class with properties:
-  - [ ] `StartWithWindows` (bool)
-  - [ ] `PollIntervalSeconds` (int)
-- [ ] Implement `SettingsHandler` with:
-  - [ ] `Load()` method to read `config.json` (create default settings if missing or malformed)
-  - [ ] `Save(Settings settings)` method to write settings to `config.json`
-- [ ] Integrate SettingsHandler in startup (read config in Program or ApplicationContext)
-- [ ] Write tests:
-  - [ ] Verify Load returns defaults when the file is missing
-  - [ ] Verify Save creates a valid config file and Load can read it back
-  - [ ] Verify that a malformed config results in default settings
+- [x] Create a `Settings` class with properties:
+  - [x] `StartWithWindows` (bool)
+  - [x] `PollIntervalSeconds` (int)
+- [x] Implement `SettingsHandler` with:
+  - [x] `Load()` method to read `config.json` (create default settings if missing or malformed)
+  - [x] `Save(Settings settings)` method to write settings to `config.json`
+- [x] Integrate SettingsHandler in startup (read config in Program or ApplicationContext)
+- [x] Write tests:
+  - [x] Verify Load returns defaults when the file is missing
+  - [x] Verify Save creates a valid config file and Load can read it back
+  - [x] Verify that a malformed config results in default settings
 
 ## Auto-Start (Registry) Implementation
 - [ ] In SettingsHandler, implement `ApplyAutoStart(bool enable)` method:

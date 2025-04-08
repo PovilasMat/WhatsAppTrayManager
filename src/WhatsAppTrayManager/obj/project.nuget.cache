@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SYVf07BuZVg=",
+  "success": true,
+  "projectFilePath": "/Users/B246654/vscode_storage/ssi-dk/WhatsAppTrayManager/src/WhatsAppTrayManager/WhatsAppTrayManager.csproj",
+  "expectedPackageFiles": [
+    "/Users/B246654/.nuget/packages/microsoft.windowsdesktop.app.ref/8.0.14/microsoft.windowsdesktop.app.ref.8.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
